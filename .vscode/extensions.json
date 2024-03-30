@@ -1,7 +1,3 @@
 {
-  "recommendations": [
-    "johnsoncodehk.volar",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss"
-  ]
+  "recommendations": ["Vue.volar"]
 }
