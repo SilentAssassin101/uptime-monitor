@@ -9,8 +9,10 @@ Substitution for Paid Uptime Tracking Tools
 - Frontend: Vue.js 3 + Vue Router
 - Backend: PHP
 
-Frontend: Silent Assassin
-Backend: Crazys_Corner
+Contributors: 
+- Frontend: Silent Assassin
+- Backend: Crazys_Corner
 
 Plan was originally to make a simple Hetrix replacement in 90 minutes, then expand it as needed. 
-Total (combined) time invested thus far: 2 hours
+
+Total (combined) time invested thus far: 3.25 hours
