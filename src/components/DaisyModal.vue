@@ -1,10 +1,11 @@
 <template>
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn btn-primary rounded-lg" onclick="my_modal_1.showModal()">{{ openText }}</button>
-    <dialog id="my_modal_1" class="modal">
+    <button class="btn btn-primary rounded-lg" @click="showModal">{{ openText }}</button>
+    <dialog :id="modalId" class="modal">
         <div class="modal-box">
             <h3 class="font-bold text-lg">{{ title }}</h3>
-            <p class="py-4">{{ content }}</p>
+            <p v-if="content" class="py-4">{{ content }}</p>
+            <slot></slot>
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
@@ -23,8 +24,7 @@ export default {
             default: 'Title'
         },
         content: {
-            type: String,
-            default: 'Content'
+            type: String
         },
         closeText: {
             type: String,
@@ -33,6 +33,16 @@ export default {
         openText: {
             type: String,
             default: 'Open Modal'
+        },
+        modalId: {
+            type: String,
+            default: 'my_modal_1'
+        }
+    },
+    methods: {
+        showModal() {
+            const modal = document.getElementById(this.modalId);
+            modal.showModal();
         }
     }
 }
